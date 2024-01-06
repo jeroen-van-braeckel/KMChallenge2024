@@ -9,39 +9,81 @@
       margin: 0;
       padding: 0;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
       height: 100vh;
       background: linear-gradient(to bottom, #00204e, #000c24);
       color: white;
       font-family: Arial, sans-serif;
     }
 
-    .scoreboard {
-      width: 300px;
+    .header {
       text-align: center;
+      width: 100%;
+      margin-top: 20px; 
+    }
+
+    .challenge-text {
+      font-family: system-ui;
+      font-size: 10em;
+      font-weight: bold;
+      color: white;
+      margin-bottom: 0;
+    }
+
+    .year-text {
+      font-size: 10em;
+      font-weight: bold;
+      color: #3498db;
+    }
+
+    .scoreboard {
+      width: 100%;
+      max-width: 600px;
+      text-align: left;
     }
 
     .participant {
-      margin: 10px 0;
+      margin-bottom: 20px;
     }
 
-    .progressbar {
-      height: 20px;
-      background: #333;
-      border-radius: 5px;
-      overflow: hidden;
-      margin-top: 5px;
+    .participant-info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
     }
 
-    .progress {
-      height: 100%;
-      transition: width 0.5s ease-in-out;
-      border-radius: 5px;
+    .participant-name {
+      font-weight: bold;
+      margin-right: 10px;
+      font-size: 2.7em;
     }
+
+    .histogram {
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+
+    .bar-container {
+      flex-grow: 1;
+    }
+
+    .bar {
+      height: 30px;
+    }
+
+    /* Different colors for sub-scores */
+    .subscore1 { background-color: #3498db; }
+    .subscore2 { background-color: #2ecc71; }
+    .subscore3 { background-color: #e74c3c; }
   </style>
 </head>
 <body>
+  <div class="header">
+    <div class="challenge-text">KMCHALLENGE</div>
+    <div class="year-text">2024</div>
+  </div>
   <div class="scoreboard" id="scoreboard"></div>
   <script src="script.js"></script>
 </body>
