@@ -23,7 +23,6 @@ participants.forEach(participant => {
   const nameDiv = document.createElement('div');
   nameDiv.className = 'participant-name';
   nameDiv.textContent = participant.name;
-  
 
   participantInfoDiv.appendChild(nameDiv);
 
@@ -34,6 +33,26 @@ participants.forEach(participant => {
     const barDiv = document.createElement('div');
     barDiv.className = `bar subscore${index + 1}`;
     barDiv.style.width = `${(value / maxTotal) * 100}%`; // Adjusted width for proportional bars
+
+    const iconSpan = document.createElement('span');
+    iconSpan.className = 'icon';
+
+    // Use Unicode characters for swimming, biking, and running icons
+    switch (index) {
+      case 0:
+        iconSpan.textContent = '🏊'; // Swimming icon
+        break;
+      case 1:
+        iconSpan.textContent = '🚴'; // Biking icon
+        break;
+      case 2:
+        iconSpan.textContent = '🏃'; // Running icon
+        break;
+      default:
+        break;
+    }
+
+    barDiv.appendChild(iconSpan);
     histogramDiv.appendChild(barDiv);
   });
 

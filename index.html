@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-0mME6ypC1J2i5RbzzFgPUz5w9CG+rrKuIq5kmQ+cvqKs4VOWBQ5OvSDi5bM5V5ig9PXh4RN0OZZaBxJHT6pZ7g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <title>Scoreboard</title>
   <style>
     body {
@@ -20,21 +22,24 @@
     .header {
       text-align: center;
       width: 100%;
-      margin-top: 20px; 
+      margin-top: 20px;
     }
 
     .challenge-text {
       font-family: system-ui;
       font-size: 10em;
       font-weight: bold;
-      color: white;
-      margin-bottom: 0;
+      margin: 0;
+      display: inline-block;
     }
 
     .year-text {
+      font-family: system-ui;
       font-size: 10em;
       font-weight: bold;
-      color: #3498db;
+      margin: 0;
+      display: inline-block;
+      color: rgb(0, 109, 243);
     }
 
     .scoreboard {
@@ -57,6 +62,7 @@
       font-weight: bold;
       margin-right: 10px;
       font-size: 2.7em;
+      margin-left: 0; /* Move names all the way to the left */
     }
 
     .histogram {
@@ -65,13 +71,24 @@
       width: 100%;
     }
 
-    .bar-container {
-      flex-grow: 1;
-    }
+   .bar-container {
+  flex-grow: 1;
+  margin-left: 0; /* Adjusted margin to start bars at the same x-position */
+  position: relative;
+}
 
-    .bar {
-      height: 30px;
-    }
+.bar {
+  height: 30px;
+  position: relative; /* Added relative positioning to the bars */
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 0; /* Adjusted left position for icons */
+  transform: translate(0, -50%);
+  font-size: 1.5em;
+}
 
     /* Different colors for sub-scores */
     .subscore1 { background-color: #3498db; }
