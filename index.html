@@ -26,21 +26,10 @@
       margin-bottom: 50px;
     }
 
-    .challenge-text {
-      font-family: system-ui;
-      font-size: 10em;
-      font-weight: bold;
-      margin: 0;
-      display: inline-block;
-    }
-
-    .year-text {
-      font-family: system-ui;
-      font-size: 10em;
-      font-weight: bold;
-      margin: 0;
-      display: inline-block;
-      color: rgb(0, 109, 243);
+    .logo {
+      width: 100%; /* Make the logo take up the full width */
+      max-width: 600px; /* Set a maximum width for the logo */
+      height: auto; /* Maintain the aspect ratio */
     }
 
     .scoreboard {
@@ -63,7 +52,10 @@
       font-weight: bold;
       margin-right: 10px;
       font-size: 2.7em;
-      margin-left: 0; /* Move names all the way to the left */  
+      margin-left: 0;
+      width: 200px;
+      overflow: hidden;
+      white-space: nowrap;
     }
 
     .histogram {
@@ -72,24 +64,24 @@
       width: 100%;
     }
 
-   .bar-container {
-  flex-grow: 1;
-  margin-left: 0; /* Adjusted margin to start bars at the same x-position */
-  position: relative;
-}
+    .bar-container {
+      flex-grow: 1;
+      margin-left: 0;
+      position: relative;
+    }
 
-.bar {
-  height: 30px;
-  position: relative; /* Added relative positioning to the bars */
-}
+    .bar {
+      height: 30px;
+      position: relative;
+    }
 
-.icon {
-  position: absolute;
-  top: 50%;
-  left: 0; /* Adjusted left position for icons */
-  transform: translate(0, -50%);
-  font-size: 1.5em;
-}
+    .icon {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+      font-size: 1.5em;
+    }
 
     /* Different colors for sub-scores */
     .subscore1 { background-color: #3498db; }
@@ -99,8 +91,7 @@
 </head>
 <body>
   <div class="header">
-    <div class="challenge-text">CHALLENGE</div>
-    <div class="year-text">2024</div>
+    <img src="LOGO.png" alt="Logo" class="logo">
   </div>
   <div class="scoreboard" id="scoreboard"></div>
   <script src="script.js"></script>
