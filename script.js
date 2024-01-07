@@ -1,8 +1,16 @@
 // Sample data (replace with your own values)
 const participants = [
-  { name: 'Jappe', values: [30, 20, 10] },
-  { name: 'Bronny', values: [25, 15, 5] },
-  { name: 'Douti', values: [40, 10, 20] }
+  { name: 'Tommy', values: [0, 0, 53] },
+  { name: 'Bronny', values: [0, 15, 80] },
+  
+  { name: 'Tommy', values: [10, 0, 53] },
+  { name: 'Bronny', values: [30, 15, 80] },
+  
+  { name: 'Tommy', values: [90, 0, 53] },
+  { name: 'Bronny', values: [26, 15, 80] },
+  
+  { name: 'Tommy', values: [2, 0, 53] },
+  { name: 'Bronny', values: [0, 15, 80] },
 ];
 
 // Find the maximum total score to scale bars proportionally
