@@ -30,6 +30,7 @@
       width: 100%; /* Make the logo take up the full width */
       max-width: 600px; /* Set a maximum width for the logo */
       height: auto; /* Maintain the aspect ratio */
+      margin: 40px;
     }
 
     .scoreboard {
@@ -40,6 +41,7 @@
 
     .participant {
       margin-bottom: 20px;
+      margin-left: 20px;
     }
 
     .participant-info {
@@ -81,12 +83,22 @@
       left: 0;
       transform: translate(0, -50%);
       font-size: 1.5em;
+      font-weight: 200;
     }
+
+    .total-score {
+    font-weight: bold;
+    position: absolute;
+    left: 100%;
+    transform: translateX(5px); /* Adjust spacing */
+    top: 20%;
+    transform: translateY(-50%);
+  }
 
     /* Different colors for sub-scores */
     .subscore1 { background-color: #3498db; }
-    .subscore2 { background-color: #2ecc71; }
-    .subscore3 { background-color: #e74c3c; }
+    .subscore2 { background-color: #e74c3c; }
+    .subscore3 { background-color: #2ecc71; }
   </style>
 </head>
 <body>
