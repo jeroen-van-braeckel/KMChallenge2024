@@ -1,6 +1,6 @@
 // Sample data (replace with your own values)
 const participants = [
-  //{ name: 'Douti', values: [246, 52, 1832] },
+ 
   { name: 'Jappe', values: [0, 9.848, 44.147] }, 
   
  // { name: 'Bronny', values: [100, 0, 503] },
@@ -10,6 +10,7 @@ const participants = [
   //{ name: 'Ja', values: [200, 15, 800] },
   
   { name: 'Tommy', values: [0, 0, 60.137]},
+  { name: 'Douti', values: [4.2, 4.0445, 52.694]},
 ];
 
 // Find the maximum total score to scale bars proportionally
@@ -66,7 +67,7 @@ participants.forEach(participant => {
     if (index === participant.values.length - 1) {
       const totalScoreSpan = document.createElement('span');
       totalScoreSpan.className = 'total-score';
-      totalScoreSpan.textContent = total;
+      totalScoreSpan.textContent =Math.round(total*100)/100;
 
       barDiv.style.position = 'relative'; // Set position to relative for proper positioning
       totalScoreSpan.style.position = 'absolute';
