@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Access Code</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(to bottom, #00204e, #000c24);
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .logo-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-container img {
+      max-width: 100%; /* Set the maximum width to 100% of the container */
+      max-height: 100vh; /* Set the maximum height to 100% of the viewport height */
+    }
+
+    .code-container {
+      margin-top: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #access-code {
+      width: 300px;
+      padding: 8px;
+      font-size: 16px;
+      margin-right: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background-color: #f9f9f9;
+    }
+
+    #copy-button {
+      padding: 8px 12px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #0d61df;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="logo-container">
+    <!-- Replace 'your-logo.svg' with the path to your SVG logo -->
+    <img src="LOGO.png" alt="Logo">
+  </div>
+
+  <div class="code-container">
+    <input type="text" id="access-code" value="Your Access Code" readonly>
+    <button id="copy-button" onclick="copyToClipboard()">Copy</button>
+  </div>
+
+  <div class="scoreboard" id="scoreboard"></div>
+
+  <script src="code.js"></script>
+</body>
+</html>
