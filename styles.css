@@ -30,6 +30,12 @@ body {
     text-align: left;
   }
 
+  
+  /* Different colors for sub-scores */
+  .subscore1 { background-color: #3498db; }
+  .subscore2 { background-color: #e74c3c; }
+  .subscore3 { background-color: #2ecc71; }
+
   .participant {
     margin-bottom: 20px;
     margin-left: 20px;
@@ -86,49 +92,50 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-.logo {
-  margin: 20px; /* Adjust margin for smaller screens */
-}
-
-.participant-name {
-    font-weight: bold;
-    margin-right: 10px;
-    font-size: 2em;
-    margin-left: 0;
-    width: 200px;
-    overflow: hidden;
-    white-space: nowrap;
+    .logo {
+      margin: 20px; /* Adjust margin for smaller screens */
+    }
+  
+    .participant-info {
+      flex-wrap: wrap; /* Allow participant info to wrap on smaller screens */
+    }
+  
+    .bar-container {
+      flex-grow: 1;
+      margin-left: 0;
+      position: relative;
+      display: flex; /* Add display flex to align items */
+      align-items: flex-start; /* Align items at the top */
+    }
+  
+    .bar {
+      height: 20px; /* Decrease bar height for smaller screens */
+      position: relative;
+      margin-top: 10px; /* Add margin to separate bars from names */
+    }
+  
+    .icon {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+      font-size: 1em;
+    }
+  
+    .total-score {
+      left: 100%;
+      transform: translateX(5px);
+      top: 20%; /* Center vertically on smaller screens */
+      transform: translateY(-50%);
+    }
+  
+    .participant-name {
+      font-weight: bold;
+      margin-right: 10px;
+      font-size: 1.5em; /* Decrease font size for smaller screens */
+      margin-left: 0;
+      width: auto; /* Allow the participant name to wrap */
+      overflow: visible; /* Allow overflow for longer names */
+      white-space: normal; /* Allow text to wrap */
+    }
   }
-
-.participant-name {
-  font-size: 1.5em; /* Decrease font size for smaller screens */
-  width: auto; /* Allow the participant name to wrap */
-  overflow: visible; /* Allow overflow for longer names */
-  white-space: normal; /* Allow text to wrap */
-}
-.icon {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(0, -50%);
-    font-size: 1em;
-  }
-
-.total-score {
-  left: 100%;
-  transform: translateX(5px);
-  top: 20%; /* Center vertically on smaller screens */
-  transform: translateY(-50%);
-}
-
-.bar {
-  height: 20px; /* Decrease bar height for smaller screens */
-}
-
-
-}
-
-  /* Different colors for sub-scores */
-  .subscore1 { background-color: #3498db; }
-  .subscore2 { background-color: #e74c3c; }
-  .subscore3 { background-color: #2ecc71; }
