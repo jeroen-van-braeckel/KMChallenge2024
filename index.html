@@ -95,6 +95,30 @@
     transform: translateY(-50%);
   }
 
+  @media only screen and (max-width: 600px) {
+  .logo {
+    margin: 20px; /* Adjust margin for smaller screens */
+  }
+
+  .participant-name {
+    font-size: 1.5em; /* Decrease font size for smaller screens */
+    width: auto; /* Allow the participant name to wrap */
+    overflow: visible; /* Allow overflow for longer names */
+    white-space: normal; /* Allow text to wrap */
+  }
+
+  .total-score {
+    left: 100%;
+    transform: translateX(5px);
+    top: 50%; /* Center vertically on smaller screens */
+    transform: translateY(-50%);
+  }
+
+  .bar {
+    height: 20px; /* Decrease bar height for smaller screens */
+  }
+}
+
     /* Different colors for sub-scores */
     .subscore1 { background-color: #3498db; }
     .subscore2 { background-color: #e74c3c; }
