@@ -43,7 +43,7 @@ participants.forEach(participant => {
   participant.values.forEach((value, index) => {
     const barDiv = document.createElement('div');
     barDiv.className = `bar subscore${index + 1}`;
-    barDiv.style.width = `${(value / maxTotal) * 90}%`; // Adjusted width for proportional bars
+    barDiv.style.width = `${(value / maxTotal) * 80}%`; // Adjusted width for proportional bars
 
     const iconSpan = document.createElement('span');
     iconSpan.className = 'icon';

@@ -94,6 +94,7 @@ body {
 @media only screen and (max-width: 600px) {
     .logo {
       margin: 20px; /* Adjust margin for smaller screens */
+      max-width: 80%; /* Set a maximum width for the logo on mobile screens */
     }
   
     .participant-info {
