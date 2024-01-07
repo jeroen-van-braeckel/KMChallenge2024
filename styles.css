@@ -74,7 +74,6 @@ body {
     left: 0;
     transform: translate(0, -50%);
     font-size: 1.5em;
-    font-weight: 200;
   }
 
   .total-score {
@@ -92,22 +91,41 @@ body {
 }
 
 .participant-name {
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 2em;
+    margin-left: 0;
+    width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+.participant-name {
   font-size: 1.5em; /* Decrease font size for smaller screens */
   width: auto; /* Allow the participant name to wrap */
   overflow: visible; /* Allow overflow for longer names */
   white-space: normal; /* Allow text to wrap */
 }
+.icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    font-size: 1em;
+  }
 
 .total-score {
   left: 100%;
   transform: translateX(5px);
-  top: 50%; /* Center vertically on smaller screens */
+  top: 20%; /* Center vertically on smaller screens */
   transform: translateY(-50%);
 }
 
 .bar {
   height: 20px; /* Decrease bar height for smaller screens */
 }
+
+
 }
 
   /* Different colors for sub-scores */

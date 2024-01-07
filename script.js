@@ -6,11 +6,11 @@ const participants = [
  // { name: 'Bronny', values: [100, 0, 503] },
   //{ name: 'Jacky', values: [300, 150, 800] },
   
- // { name: 'Rob', values: [900, 0, 503] },
   //{ name: 'Ja', values: [200, 15, 800] },
   
   { name: 'Tommy', values: [0, 0, 60.137]},
   { name: 'Douti', values: [4.2, 4.0445, 52.694]},
+  { name: 'Rob', values: [0, 0, 67.551] },
 ];
 
 // Find the maximum total score to scale bars proportionally
