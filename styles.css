@@ -110,8 +110,8 @@ body {
   
     .bar {
       height: 20px; /* Decrease bar height for smaller screens */
+      width: 50px; /* Fixed width for the bars */
       position: relative;
-      margin-top: 10px; /* Add margin to separate bars from names */
     }
   
     .icon {
@@ -134,8 +134,9 @@ body {
       margin-right: 10px;
       font-size: 1.5em; /* Decrease font size for smaller screens */
       margin-left: 0;
-      width: auto; /* Allow the participant name to wrap */
-      overflow: visible; /* Allow overflow for longer names */
-      white-space: normal; /* Allow text to wrap */
+      width: 80px; /* Adjust width based on the maximum name length */
+      overflow: hidden;
+      white-space: nowrap;
     }
   }
+  
