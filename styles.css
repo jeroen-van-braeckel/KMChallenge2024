@@ -96,6 +96,10 @@ body {
       margin: 20px; /* Adjust margin for smaller screens */
       max-width: 80%; /* Set a maximum width for the logo on mobile screens */
     }
+
+    .stefanie{
+      max-width: 80%; 
+    }
   
     .participant-info {
       flex-wrap: wrap; /* Allow participant info to wrap on smaller screens */
