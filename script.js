@@ -10,6 +10,22 @@ const participants = [
   { name: 'Ja', values: [0, 0, 100.395] },
   { name: 'Jury Sam', values:[0, 0, 14.678] },
 ];
+function toggleGifPopup() {
+  var gifPopup = document.getElementById('gifPopup');
+  var stefanieGif = document.querySelector('.stefanie');
+
+  // Toggle the display state
+  if (stefanieGif.style.display === 'none') {
+    stefanieGif.style.display = 'block';
+    gifPopup.style.display = 'block';
+  } else {
+    stefanieGif.style.display = 'none';
+    gifPopup.style.display = 'none';
+  }
+}
+
+// Call the function every 500 milliseconds (0.5 seconds)
+setInterval(toggleGifPopup, 3000);
 
 // Find the maximum total score to scale bars proportionally
 const maxTotal = Math.max(...participants.map(participant => participant.values.reduce((sum, value) => sum + value, 0)));

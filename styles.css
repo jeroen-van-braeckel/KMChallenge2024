@@ -90,19 +90,33 @@ body {
   top: 20%;
   transform: translateY(-50%);
 }
-
-.stefanie{
-  max-width: 15%; 
+.stefanie {
+  display: none; /* Initially hide the GIF */
 }
 
+/* Popup styles */
+.popup {
+  display: none; /* Initially hide the GIF */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+}
 @media only screen and (max-width: 600px) {
     .logo {
       margin: 20px; /* Adjust margin for smaller screens */
       max-width: 80%; /* Set a maximum width for the logo on mobile screens */
     }
+    .popup {
+      max-width: 50%;
+    }
 
     .stefanie{
-      max-width: 40%; 
+      max-width: 100%; 
     }
   
     .participant-info {
