@@ -91,6 +91,10 @@ body {
   transform: translateY(-50%);
 }
 
+.stefanie{
+  max-width: 15%; 
+}
+
 @media only screen and (max-width: 600px) {
     .logo {
       margin: 20px; /* Adjust margin for smaller screens */
@@ -98,7 +102,7 @@ body {
     }
 
     .stefanie{
-      max-width: 80%; 
+      max-width: 15%; 
     }
   
     .participant-info {
