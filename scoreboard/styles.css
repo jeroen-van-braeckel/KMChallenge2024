@@ -4,7 +4,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
     background: linear-gradient(to bottom, #00204e, #000c24);
     color: white;
     font-family: Arial, sans-serif;
@@ -22,6 +21,7 @@ body {
     max-width: 600px; /* Set a maximum width for the logo */
     height: auto; /* Maintain the aspect ratio */
     margin: 40px;
+    margin-bottom: 20px;
   }
 
   .scoreboard {
