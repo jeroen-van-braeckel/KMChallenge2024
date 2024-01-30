@@ -139,5 +139,9 @@ body {
       overflow: hidden;
       white-space: nowrap;
     }
+
+    body{
+      height: 100vh;
+    }
   }
   
