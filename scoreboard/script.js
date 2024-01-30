@@ -1,26 +1,26 @@
 // Sample data (replace with your own values)
+
 const participants = [
- 
-  { name: 'Jappe', values: [0, 12.3541, 224.79] }, 
-  { name: 'Tommy', values: [0, 0, 223.821]},
-  { name: 'Douti', values: [12, 4.0444, 125.643]},
-  { name: 'Rob', values:[0, 0, 176.574]},
-  { name: 'Jacky', values: [0, 0, 110.651]},
-  { name: 'Bronny', values: [0, 0, 225.738] },
-  { name: 'Ja', values: [0, 0, 100.395] },
-  { name: 'Jury Sam', values:[0, 0, 14.678] },
+  { name: "Jappe", values: [0, 24.8146, 279.82] },
+  { name: "Tommy", values: [0, 0, 309.552] },
+  { name: "Douti", values: [19.5, 16.3011, 173.901] },
+  { name: "Rob", values: [0, 0, 225.788] },
+  { name: "Jury Sam", values: [0, 0, 18.689] },
+  { name: "Jacky", values: [0, 0, 145.31] },
+  { name: "Bronny", values: [0, 13.0893, 267.334] },
+  { name: "Ja", values: [0, 0, 146.471] },
 ];
 function toggleGifPopup() {
-  var gifPopup = document.getElementById('gifPopup');
-  var stefanieGif = document.querySelector('.stefanie');
+  var gifPopup = document.getElementById("gifPopup");
+  var stefanieGif = document.querySelector(".stefanie");
 
   // Toggle the display state
-  if (stefanieGif.style.display === 'none') {
-    stefanieGif.style.display = 'block';
-    gifPopup.style.display = 'block';
+  if (stefanieGif.style.display === "none") {
+    stefanieGif.style.display = "block";
+    gifPopup.style.display = "block";
   } else {
-    stefanieGif.style.display = 'none';
-    gifPopup.style.display = 'none';
+    stefanieGif.style.display = "none";
+    gifPopup.style.display = "none";
   }
 }
 
@@ -28,47 +28,51 @@ function toggleGifPopup() {
 setInterval(toggleGifPopup, 3000);
 
 // Find the maximum total score to scale bars proportionally
-const maxTotal = Math.max(...participants.map(participant => participant.values.reduce((sum, value) => sum + value, 0)));
+const maxTotal = Math.max(
+  ...participants.map((participant) =>
+    participant.values.reduce((sum, value) => sum + value, 0)
+  )
+);
 
 // Create and append horizontal histogram bars to the scoreboard
-const scoreboard = document.getElementById('scoreboard');
+const scoreboard = document.getElementById("scoreboard");
 
-participants.forEach(participant => {
+participants.forEach((participant) => {
   const total = participant.values.reduce((sum, value) => sum + value, 0);
 
-  const participantDiv = document.createElement('div');
-  participantDiv.className = 'participant';
+  const participantDiv = document.createElement("div");
+  participantDiv.className = "participant";
 
-  const participantInfoDiv = document.createElement('div');
-  participantInfoDiv.className = 'participant-info';
+  const participantInfoDiv = document.createElement("div");
+  participantInfoDiv.className = "participant-info";
 
-  const nameDiv = document.createElement('div');
-  nameDiv.className = 'participant-name';
+  const nameDiv = document.createElement("div");
+  nameDiv.className = "participant-name";
   nameDiv.textContent = participant.name;
 
   participantInfoDiv.appendChild(nameDiv);
 
-  const histogramDiv = document.createElement('div');
-  histogramDiv.className = 'histogram';
+  const histogramDiv = document.createElement("div");
+  histogramDiv.className = "histogram";
 
   participant.values.forEach((value, index) => {
-    const barDiv = document.createElement('div');
+    const barDiv = document.createElement("div");
     barDiv.className = `bar subscore${index + 1}`;
     barDiv.style.width = `${(value / maxTotal) * 80}%`; // Adjusted width for proportional bars
 
-    const iconSpan = document.createElement('span');
-    iconSpan.className = 'icon';
+    const iconSpan = document.createElement("span");
+    iconSpan.className = "icon";
 
     // Use Unicode characters for swimming, biking, and running icons
     switch (index) {
       case 0:
-        iconSpan.textContent = '🏊'; // Swimming icon
+        iconSpan.textContent = "🏊"; // Swimming icon
         break;
       case 1:
-        iconSpan.textContent = '🚴'; // Biking icon
+        iconSpan.textContent = "🚴"; // Biking icon
         break;
       case 2:
-        iconSpan.textContent = '🏃'; // Running icon
+        iconSpan.textContent = "🏃"; // Running icon
         break;
       default:
         break;
@@ -79,21 +83,21 @@ participants.forEach(participant => {
 
     // Display the total score at the end of the bar
     if (index === participant.values.length - 1) {
-      const totalScoreSpan = document.createElement('span');
-      totalScoreSpan.className = 'total-score';
-      totalScoreSpan.textContent =Math.round(total*100)/100;
+      const totalScoreSpan = document.createElement("span");
+      totalScoreSpan.className = "total-score";
+      totalScoreSpan.textContent = Math.round(total * 100) / 100;
 
-      barDiv.style.position = 'relative'; // Set position to relative for proper positioning
-      totalScoreSpan.style.position = 'absolute';
-      totalScoreSpan.style.left = '100%'; // Align to the right edge of the bar
-      totalScoreSpan.style.transform = 'translateX(5px)'; // Adjust spacing
+      barDiv.style.position = "relative"; // Set position to relative for proper positioning
+      totalScoreSpan.style.position = "absolute";
+      totalScoreSpan.style.left = "100%"; // Align to the right edge of the bar
+      totalScoreSpan.style.transform = "translateX(5px)"; // Adjust spacing
 
       barDiv.appendChild(totalScoreSpan);
     }
   });
 
-  const barContainer = document.createElement('div');
-  barContainer.className = 'bar-container';
+  const barContainer = document.createElement("div");
+  barContainer.className = "bar-container";
   barContainer.appendChild(histogramDiv);
 
   participantInfoDiv.appendChild(barContainer);
