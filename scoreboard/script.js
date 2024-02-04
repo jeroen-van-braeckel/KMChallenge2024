@@ -7,7 +7,7 @@ const participants = [
   { name: "Rob", values: [0, 0, 284.128] },
   { name: "Jury Sam", values: [0, 0, 18.689] },
   { name: "Jacky", values: [0, 0, 160.384] },
-  { name: "Brony", values: [2.024, 19.458, 286.211] },
+  { name: "Bronny", values: [2.024, 19.458, 286.211] },
   { name: "Ja", values: [0, 0, 185.155] },
 ];
 function toggleGifPopup() {
