@@ -1,14 +1,14 @@
 // Sample data (replace with your own values)
 
 const participants = [
-  { name: "Jappe", values: [0, 24.8146, 279.82] },
-  { name: "Tommy", values: [0, 0, 309.552] },
-  { name: "Douti", values: [19.5, 16.3011, 173.901] },
-  { name: "Rob", values: [0, 0, 225.788] },
+  { name: "Jappe", values: [2, 38.4092, 300.575] },
+  { name: "Tommy", values: [0, 0, 360.466] },
+  { name: "Douti", values: [19.5, 24.1801, 216.156] },
+  { name: "Rob", values: [0, 0, 284.128] },
   { name: "Jury Sam", values: [0, 0, 18.689] },
-  { name: "Jacky", values: [0, 0, 145.31] },
-  { name: "Bronny", values: [0, 13.0893, 267.334] },
-  { name: "Ja", values: [0, 0, 146.471] },
+  { name: "Jacky", values: [0, 0, 160.384] },
+  { name: "Brony", values: [2.024, 19.458, 286.211] },
+  { name: "Ja", values: [0, 0, 185.155] },
 ];
 function toggleGifPopup() {
   var gifPopup = document.getElementById("gifPopup");
