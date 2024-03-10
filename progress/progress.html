@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Challenge Progress Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <canvas id="myChart" width="800" height="400"></canvas>
+
+    <script>
+        // Array to store data for each week
+        const weeklyData = [];
+
+        // Fetch data from files and populate weeklyData array
+        const weeks = [1, 2]; // You can add more weeks here if needed
+        weeks.forEach(week => {
+            fetch(`https://github.com/jeroen-van-braeckel/KMChallenge2024/blob/main/weekly_totals/week_${week}.txt`)
+                .then(response => response.text())
+                .then(data => {
+                    const parsedData = JSON.parse(`[${data.trim()}]`);
+                    weeklyData.push(parsedData);
+                    if (weeklyData.length === weeks.length) {
+                        // Once all data is fetched, create the chart
+                        createChart();
+                    }
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        });
+
+        // Function to create the chart
+        function createChart() {
+            const ctx = document.getElementById('myChart').getContext('2d');
+
+            // Extracting participant names
+            const participantNames = weeklyData[0].map(entry => entry.name);
+
+            // Calculating total score for each participant over the weeks
+            const participantData = participantNames.map(name => {
+                const scores = weeklyData.map(week => {
+                    const participantEntry = week.find(entry => entry.name === name);
+                    return participantEntry ? participantEntry.values.reduce((acc, val) => acc + val, 0) : 0;
+                });
+                return {
+                    label: name,
+                    data: scores,
+                    borderColor: '#' + (Math.random().toString(16) + '000000').substring(2,8), // Random color
+                    fill: false
+                };
+            });
+
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: weeks.map(week => `Week ${week}`),
+                    datasets: participantData
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
