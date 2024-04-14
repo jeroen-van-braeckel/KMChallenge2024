@@ -1,6 +1,15 @@
 // Sample data (replace with your own values)
 
-const participants =[{ name: 'Jappe', values: [ 5.125, 64.7743, 803.968 ] }, { name: 'Tommy', values: [ 1.25, 38.659, 862.909 ] }, { name: 'Douti', values: [ 101.4, 184.9805, 614.929 ] }, { name: 'Rob', values: [ 0, 0, 695.438 ] }, { name: 'Jury Sam', values: [ 0, 0, 75.607 ] }, { name: 'Jacky', values: [ 0, 0, 387.449 ] }, { name: 'Bronny', values: [ 10.019, 61.6231, 671.999 ] }, { name: 'Ja', values: [ 5.728, 35.8571, 342.704 ] }];
+const participants =[
+  { name: 'Douti', values: [ 115.1, 228.8556, 664.45 ] },
+  { name: 'Tommy', values: [ 1.25, 56.2811, 924.364 ] },
+  { name: 'Jappe', values: [ 5.125, 77.0251, 809.648 ] },
+  { name: 'Bronny', values: [ 10.019, 61.6231, 722.022 ] },
+  { name: 'Rob', values: [ 0, 0, 772.089 ] },
+  { name: 'Jacky', values: [ 0, 0, 452.435 ] },
+  { name: 'Ja', values: [ 7.92, 35.8571, 372.985 ] },
+  { name: 'Jury Sam', values: [ 0, 0, 99.535 ] }
+]
 function toggleGifPopup() {
  
  
