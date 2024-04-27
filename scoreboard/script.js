@@ -1,33 +1,53 @@
 // Sample data (replace with your own values)
+const participants = [
+  { name: "Jappe", values: [5.125, 77.0251, 809.648] },
+  { name: "Tommy", values: [1.25, 77.4004, 1016.648] },
+  { name: "Douti", values: [132.55, 247.6725, 736.974] },
+  { name: "Rob", values: [0, 0, 868.576] },
+  { name: "Jury Sam", values: [0, 0, 104.807] },
+  { name: "Jacky", values: [0, 0, 486.708] },
+  { name: "Bronny", values: [10.019, 61.6231, 810.235] },
+  { name: "Ja", values: [10.064, 35.8571, 430.197] },
+];
 
-const participants =[
-  { name: 'Douti', values: [ 115.1, 228.8556, 664.45 ] },
-  { name: 'Tommy', values: [ 1.25, 56.2811, 924.364 ] },
-  { name: 'Jappe', values: [ 5.125, 77.0251, 809.648 ] },
-  { name: 'Bronny', values: [ 10.019, 61.6231, 722.022 ] },
-  { name: 'Rob', values: [ 0, 0, 772.089 ] },
-  { name: 'Jacky', values: [ 0, 0, 452.435 ] },
-  { name: 'Ja', values: [ 7.92, 35.8571, 372.985 ] },
-  { name: 'Jury Sam', values: [ 0, 0, 99.535 ] }
-]
-function toggleGifPopup() {
- 
- 
-  var gifPopup = document.getElementById("gifPopup");
-  var stefanieGif = document.querySelector(".stefanie");
+function animateBars() {
+  const bars = document.querySelectorAll('.bar');
+  let delay = 0; // Initial delay
+  
+  bars.forEach((bar, index) => {
+    setTimeout(() => {
+      const width = bar.dataset.width;
+      bar.style.transition = 'width 1s'; // Adjust the duration here (e.g., 1s for 1 second)
+      bar.style.width = width;
 
-  // Toggle the display state
-  if (stefanieGif.style.display === "none") {
-    stefanieGif.style.display = "block";
-    gifPopup.style.display = "block";
-  } else {
-    stefanieGif.style.display = "none";
-    gifPopup.style.display = "none";
-  }
+      // Animate the total score
+      const totalScore = bar.querySelector('.total-score');
+      const total = parseFloat(totalScore.textContent);
+      let count = 0;
+      const interval = 1000 / total; // Adjust the interval for smoother counting
+      totalScore.style.visibility = 'visible'; // Show the total score
+
+
+      const timer = setInterval(() => {
+        totalScore.textContent = count.toFixed(2);
+        count += total / 100; // Adjust the step size for smoother counting
+        if (count >= total) {
+          clearInterval(timer);
+          totalScore.textContent = total.toFixed(2);
+        }
+      }, interval);
+    }, delay);
+
+    // Increase delay for the next bar
+    delay += 1000; // Adjust the delay (e.g., 1000 milliseconds for 1 second)
+  });
 }
 
-// Call the function every 500 milliseconds (0.5 seconds)
-setInterval(toggleGifPopup, 3000);
+
+
+
+// Call the function to animate bars when the page loads
+window.onload = animateBars;
 
 // Find the maximum total score to scale bars proportionally
 const maxTotal = Math.max(
@@ -60,7 +80,7 @@ participants.forEach((participant) => {
   participant.values.forEach((value, index) => {
     const barDiv = document.createElement("div");
     barDiv.className = `bar subscore${index + 1}`;
-    barDiv.style.width = `${(value / maxTotal) * 80}%`; // Adjusted width for proportional bars
+    barDiv.dataset.width = `${(value / maxTotal) * 80}%`; // Store width as data attribute
 
     const iconSpan = document.createElement("span");
     iconSpan.className = "icon";
@@ -106,3 +126,4 @@ participants.forEach((participant) => {
   participantDiv.appendChild(participantInfoDiv);
   scoreboard.appendChild(participantDiv);
 });
+

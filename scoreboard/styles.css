@@ -83,6 +83,7 @@ body {
   }
 
   .total-score {
+    visibility: hidden;
   font-weight: bold;
   position: absolute;
   left: 100%;

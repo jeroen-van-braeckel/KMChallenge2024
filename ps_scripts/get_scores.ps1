@@ -48,5 +48,5 @@ for ($i = 0; $i -lt $users.count; $i++) {
 }
 
 # Combine all participant strings and format the output
-$outputString = "[" + ($output -join ', ') + "];"
+$outputString = "const participants =[" + ($output -join ', ') + "];"
 Write-Output $outputString
