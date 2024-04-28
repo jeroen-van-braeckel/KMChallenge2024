@@ -1,32 +1,30 @@
 // Sample data (replace with your own values)
 const participants = [
-  { name: "Jappe", values: [5.125, 77.0251, 809.648] },
+  { name: "Jappe", values: [5.125, 77.6732, 809.648] },
   { name: "Tommy", values: [1.25, 77.4004, 1016.648] },
-  { name: "Douti", values: [132.55, 247.6725, 736.974] },
+  { name: "Douti", values: [133.05, 253.3764, 742.431] },
   { name: "Rob", values: [0, 0, 868.576] },
   { name: "Jury Sam", values: [0, 0, 104.807] },
   { name: "Jacky", values: [0, 0, 486.708] },
-  { name: "Bronny", values: [10.019, 61.6231, 810.235] },
+  { name: "Bronny", values: [10.019, 61.6231, 831.04] },
   { name: "Ja", values: [10.064, 35.8571, 430.197] },
 ];
-
 function animateBars() {
-  const bars = document.querySelectorAll('.bar');
+  const bars = document.querySelectorAll(".bar");
   let delay = 0; // Initial delay
-  
+
   bars.forEach((bar, index) => {
     setTimeout(() => {
       const width = bar.dataset.width;
-      bar.style.transition = 'width 1s'; // Adjust the duration here (e.g., 1s for 1 second)
+      bar.style.transition = "width 1s"; // Adjust the duration here (e.g., 1s for 1 second)
       bar.style.width = width;
 
       // Animate the total score
-      const totalScore = bar.querySelector('.total-score');
+      const totalScore = bar.querySelector(".total-score");
       const total = parseFloat(totalScore.textContent);
       let count = 0;
       const interval = 1000 / total; // Adjust the interval for smoother counting
-      totalScore.style.visibility = 'visible'; // Show the total score
-
+      totalScore.style.visibility = "visible"; // Show the total score
 
       const timer = setInterval(() => {
         totalScore.textContent = count.toFixed(2);
@@ -42,9 +40,6 @@ function animateBars() {
     delay += 1000; // Adjust the delay (e.g., 1000 milliseconds for 1 second)
   });
 }
-
-
-
 
 // Call the function to animate bars when the page loads
 window.onload = animateBars;
@@ -126,4 +121,3 @@ participants.forEach((participant) => {
   participantDiv.appendChild(participantInfoDiv);
   scoreboard.appendChild(participantDiv);
 });
-
