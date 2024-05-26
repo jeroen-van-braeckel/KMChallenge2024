@@ -1,6 +1,5 @@
 // Sample data (replace with your own values)
-const participants =[{ name: 'Jappe', values: [ 5.125, 120.3327, 880.496 ] }, { name: 'Tommy', values: [ 1.25, 124.4187, 1168.836 ] }, { name: 'Douti', values: [ 147.355, 311.2913, 856.055 ] }, { name: 'Rob', values: [ 0, 0, 1051.988 ] }, { name: 'Jury Sam', values: [ 0, 0, 164.075 ] }, { name: 'Jacky', values: [ 0, 0, 537.699 ] }, { name: 'Bronny', values: [ 10.019, 69.8371, 1018.313 ] }, { name: 'Ja', values: [ 11.616, 35.8571, 500.316 ] }];
-
+const participants =[{ name: 'Jappe', values: [ 5.125, 120.3327, 928.767 ] }, { name: 'Tommy', values: [ 1.25, 124.4187, 1215.123 ] }, { name: 'Douti', values: [ 150.355, 311.2913, 898.516 ] }, { name: 'Rob', values: [ 0, 0, 1096.341 ] }, { name: 'Jury Sam', values: [ 0, 0, 185.492 ] }, { name: 'Jacky', values: [ 0, 0, 568.228 ] }, { name: 'Bronny', values: [ 10.019, 69.8371, 1054.212 ] }, { name: 'Ja', values: [ 11.616, 35.8571, 529.327 ] }];
 
 
 
