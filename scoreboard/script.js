@@ -1,6 +1,5 @@
 // Sample data (replace with your own values)
-const participants =[{ name: 'Jappe', values: [ 5.438, 151.5413, 1038.764 ] }, { name: 'Tommy', values: [ 1.25, 124.4187, 1338.085 ] }, { name: 'Douti', values: [ 153.455, 334.0994, 983.236 ] }, { name: 'Rob', values: [ 0, 0, 1224.286 ] }, { name: 'Jury Sam', values: [ 0.313, 0, 241.504 ] }, { name: 'Jacky', values: [ 0, 0, 612.805 ] }, { name: 'Bronny', values: [ 12.044, 76.4356, 1219.164 ] }, { name: 'Ja', values: [ 11.616, 35.8571, 611.934 ] }];
-
+const participants =[{ name: 'Jappe', values: [ 5.438, 155.2999, 1112.762 ] }, { name: 'Tommy', values: [ 1.25, 124.4187, 1406.058 ] }, { name: 'Douti', values: [ 153.455, 334.0994, 1035.86 ] }, { name: 'Rob', values: [ 0, 0, 1273.357 ] }, { name: 'Jury Sam', values: [ 0.313, 0, 255.215 ] }, { name: 'Jacky', values: [ 0, 0, 634.397 ] }, { name: 'Bronny', values: [ 12.044, 76.4356, 1302.119 ] }, { name: 'Ja', values: [ 11.616, 35.8571, 642.798 ] }];  
 
 function animateBars() {
   const bars = document.querySelectorAll(".bar");
