@@ -1,6 +1,4 @@
-const participants =[{ name: 'Jappe', values: [ 16.419, 255.8216, 1866.182 ] }, { name: 'Tommy', values: [ 2.45, 253.5708, 2070.329 ] }, { name: 'Douti', values: [ 244.789, 674.594, 1537.87 ] }, { name: 'Rob', values: [ 27.95, 21.3552, 1797.302 ] }, { name: 'Jury Sam', values: [ 8.311, 0, 578.214 ] }, { name: 'Jacky', values: [ 0, 3.1911, 1056.741 ] }, { name: 'Bronny', values: [ 17.742, 83.6035, 2374.369 ] }, { name: 'Ja', values: [ 19.648, 81.1236, 1317.993 ] }];
-
-
+const participants =[{ name: 'Jappe', values: [ 16.419, 261.3735, 1918.174 ] }, { name: 'Tommy', values: [ 2.45, 264.9067, 2111.122 ] }, { name: 'Douti', values: [ 255.239, 698.8029, 1607.694 ] }, { name: 'Rob', values: [ 27.95, 21.3552, 1859.846 ] }, { name: 'Jury Sam', values: [ 8.311, 0, 584.382 ] }, { name: 'Jacky', values: [ 0, 3.1911, 1084.173 ] }, { name: 'Bronny', values: [ 17.742, 83.6035, 2457.908 ] }, { name: 'Ja', values: [ 19.648, 81.1236, 1356.941 ] }];
 
 function animateBars() {
   const bars = document.querySelectorAll(".bar");
