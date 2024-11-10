@@ -41,7 +41,7 @@ for ($i = 0; $i -lt $users.count; $i++) {
 
     
     # Construct the participant string
-    $participant = "{ name: '$($users[$i])', values: [ $($resultArray -join ', ') ] }"
+    $participant = "{ name: '$($users[$i])', values: [ $($resultArray -replace(",",'.') -join ', ') ] }"
 
     # Add the participant string to the output array
     $output += $participant
