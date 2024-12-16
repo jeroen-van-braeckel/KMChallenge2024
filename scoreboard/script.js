@@ -1,4 +1,5 @@
-const participants =[{ name: 'Jappe', values: [ 17.419, 268.5549, 2301.559 ] }, { name: 'Tommy', values: [ 2.45, 283.5652, 2490.461 ] }, { name: 'Douti', values: [ 314.839, 789.0509, 1992.267 ] }, { name: 'Rob', values: [ 29.05, 21.3552, 2073.257 ] }, { name: 'Jury Sam', values: [ 8.311, 0, 691.958 ] }, { name: 'Jacky', values: [ 0, 3.1911, 1251.675 ] }, { name: 'Bronny', values: [ 17.742, 83.6035, 2980.215 ] }, { name: 'Ja', values: [ 19.648, 144.4456, 1648.923 ] }];
+const participants =[{ name: 'Jappe', values: [ 17.419, 271.913, 2345.256 ] }, { name: 'Tommy', values: [ 2.45, 283.5652, 2562.219 ] }, { name: 'Douti', values: [ 321.839, 806.5611, 2049.11 ] }, { name: 'Rob', values: [ 29.05, 21.3552, 2073.257 ] }, { name: 'Jury Sam', values: [ 8.311, 0, 704.582 ] }, { name: 'Jacky', values: [ 0, 3.1911, 1251.675 ] }, { name: 'Bronny', values: [ 17.742, 83.6035, 3061.98 ] }, { name: 'Ja', values: [ 19.648, 148.7097, 1674.094 ] }];
+
 
 
 //Bronny -15.6
